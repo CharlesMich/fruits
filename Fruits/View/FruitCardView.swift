@@ -10,6 +10,8 @@ import SwiftUI
 struct FruitCardView: View {
 //    MARK: - PROPERTIES
     
+    var fruit: Fruit
+    
     @State private var isAnimating: Bool = false
     
 //    MARK: - BODY
@@ -18,13 +20,13 @@ struct FruitCardView: View {
         ZStack {
             VStack(spacing: 20) {
     //            FRUIT: IMAGE
-                Image("blueberry")
+                Image(fruit.image)
                     .resizable()
                     .scaledToFit()
                     .shadow(color: Color(red:0, green: 0, blue: 0, opacity: 0.15), radius: 8, x: 6, y: 8)
                     .scaleEffect(isAnimating ? 1.0 : 0.6)
     //            FRUIT: TITLE
-                Text("Blueberry")
+                Text(fruit.title)
                     .foregroundColor(Color.white)
                     .font(.largeTitle)
                     .fontWeight(.heavy)
@@ -32,7 +34,7 @@ struct FruitCardView: View {
                 
                 
     //            FRUIT: HEADLINE
-                Text("Blueberries are sweet, nutritious and wildly popular fruit all over the world")
+                Text(fruit.headline)
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 16)
@@ -47,7 +49,7 @@ struct FruitCardView: View {
             }//: VSTACK
         }//: ZSTACK
         .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-        .background(LinearGradient(gradient: Gradient(colors: [Color("ColorBlueberryLight"), Color("ColorBlueberryDark")]), startPoint: .top, endPoint: .bottom))
+        .background(LinearGradient(gradient: Gradient(colors: fruit.gradientColors), startPoint: .top, endPoint: .bottom))
         .cornerRadius(20)
         .padding(.horizontal, 20)
     }
@@ -56,5 +58,5 @@ struct FruitCardView: View {
 //MARK: - PREVIEW
 
 #Preview {
-    FruitCardView()
+    FruitCardView(fruit: fruitsData[1])
 }
