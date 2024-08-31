@@ -19,6 +19,7 @@
 		34BD8AAF2C801C20002C410E /* FruitRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD8AAE2C801C20002C410E /* FruitRowView.swift */; };
 		34BD8AB72C814A55002C410E /* FruitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD8AB62C814A55002C410E /* FruitDetailView.swift */; };
 		34BD8AB92C814ED8002C410E /* FruitHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD8AB82C814ED8002C410E /* FruitHeaderView.swift */; };
+		34BD8ABB2C82D03F002C410E /* SourceLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD8ABA2C82D03F002C410E /* SourceLinkView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		34BD8AAE2C801C20002C410E /* FruitRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitRowView.swift; sourceTree = "<group>"; };
 		34BD8AB62C814A55002C410E /* FruitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDetailView.swift; sourceTree = "<group>"; };
 		34BD8AB82C814ED8002C410E /* FruitHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitHeaderView.swift; sourceTree = "<group>"; };
+		34BD8ABA2C82D03F002C410E /* SourceLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLinkView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				34BD8AAE2C801C20002C410E /* FruitRowView.swift */,
 				34BD8AB62C814A55002C410E /* FruitDetailView.swift */,
 				34BD8AB82C814ED8002C410E /* FruitHeaderView.swift */,
+				34BD8ABA2C82D03F002C410E /* SourceLinkView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34BD8AA92C7E8D48002C410E /* FruitData.swift in Sources */,
+				34BD8ABB2C82D03F002C410E /* SourceLinkView.swift in Sources */,
 				34BD8A682C7D2A45002C410E /* ContentView.swift in Sources */,
 				34BD8AAF2C801C20002C410E /* FruitRowView.swift in Sources */,
 				34BD8A782C7D3447002C410E /* StartButtonView.swift in Sources */,
