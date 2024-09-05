@@ -19,20 +19,35 @@ struct SettingsView: View {
                     
                     GroupBox(
                         label:
-                            HStack {
-                                Text("Frutcus".uppercased())
-                                    .fontWeight(.bold)
-                                     Spacer()
-                                     Image(systemName: "info.circle")
-                            }
+                            SettingsLabelView(labelText: "fructus", labelImage: "info.circle")
                                
                                 ) {
-                        Text("Hello World")
+                                    
+                                    Divider().padding(.vertical, 4)
+                                    HStack (alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 10){
+                                        Image("logo")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 80, height: 80)
+                                            .cornerRadius(9)
+                                        Text("Most fruits are natural low in fat, sodium, and calories. None have cholesterol. Fruits are sources of many essential nutrients, including potassium, dietary fiber, vitamins, and much more ")
+                                            .font(.footnote)
+                                    }
                     }
 //                    MARK: - SECTION 2
-//                    MARK: - SECTION 3
                     
-                    Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                    GroupBox(
+                        label: SettingsLabelView(labelText: "Application", labelImage: "apps.iphone") 
+                        ){
+                            Divider().padding(.vertical, 4)
+                            HStack {
+                                Text("Developer").foregroundColor(Color.gray)
+                                Spacer()
+                                Text("John / Jane")
+                            }
+                        }
+//                    MARK: - SECTION 3
+                
                 } //: VSTACK
                 .navigationBarTitle(Text("Settings"), displayMode: .large)
                 .navigationBarItems(trailing: Button(action: {
