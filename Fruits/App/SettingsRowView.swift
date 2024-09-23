@@ -20,11 +20,28 @@ struct SettingsRowView: View {
         HStack {
             Text(name).foregroundColor(Color.gray)
             Spacer()
-            Text(content ?? <#default value#>)
+            if (content != nil) {
+                Text(content!)
+            } else if (linkLabel != nil && linkDestination != nil) {
+                Link(linkLabel!, destination: URL(string: "https://\(linkDestination!)")!)
+                Image(systemName: "arrow.up.right.square").foregroundColor(.pink)
+            }
+            else {
+                EmptyView()
+            }
         }
     }
 }
 
 #Preview {
-    SettingsRowView(name: "Charles", content: "John/ Jane")
+    Group {
+        SettingsRowView(name: "Developer", content: "John/ Jane")
+            .previewLayout(.fixed(width: 375, height: 60))
+            .padding()
+        SettingsRowView(name: "Developer", content: "John / Jane")
+            .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
+            .previewLayout(.fixed(width: 375, height: 60))
+            .padding()
+    }
+  
 }
